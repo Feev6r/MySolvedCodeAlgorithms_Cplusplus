@@ -1,17 +1,17 @@
 #include <iostream>
 
 //Definition for singly-linked list.
-struct Node {
+struct ListNode {
 	int val;
-	Node* next;
-	Node(int x) : val(x), next(NULL) {}
+	ListNode* next;
+	ListNode(int x) : val(x), next(NULL) {}
 };
 
 //bad solution
-void deleteNode(Node* node) {
+void deleteNode(ListNode* node) {
 
-    Node* temp = node;
-    Node* prev = node;
+    ListNode* temp = node;
+    ListNode* prev = node;
     
     while (temp->next != NULL) {
 
@@ -24,7 +24,7 @@ void deleteNode(Node* node) {
 }
 
 //normal solution
-void deleteNode(Node* node) {
+void deleteNode(ListNode* node) {
     node->val = node->next->val;
     node->next = node->next->next;
 }

@@ -5,22 +5,22 @@
 using namespace std;
 
 
-class Node {
+class ListNode {
 public:
     int value;
-    Node* Next;
+    ListNode* Next;
 
 };
 
-struct Node {
+struct ListNode {
     int val;
-    Node* next;
-    Node() : val(0), next(nullptr) {}
-    Node(int x) : val(x), next(nullptr) {}
-    Node(int x, Node* next) : val(x), next(next) {}
+    ListNode* next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
-void printList(Node* n) {
+void printList(ListNode* n) {
     while (n != NULL)
     {
         cout << n->val << endl;
@@ -29,9 +29,9 @@ void printList(Node* n) {
 }
 
 
-void insertAtTheFront(Node** head, int newValue) {
+void insertAtTheFront(ListNode** head, int newValue) {
 
-    Node* newNode = new Node();
+    ListNode* newNode = new ListNode();
     newNode->val = newValue;
 
 
@@ -52,9 +52,9 @@ void insertAtTheFront(Node** head, int newValue) {
 //*head = newNode
 
 
-void insertAtTheEnd(Node** head, int newValue) {
+void insertAtTheEnd(ListNode** head, int newValue) {
 
-    Node* newNode = new Node();
+    ListNode* newNode = new ListNode();
     newNode->val = newValue;
     newNode->next = NULL;
 
@@ -63,7 +63,7 @@ void insertAtTheEnd(Node** head, int newValue) {
         return;
     }
 
-    Node* last = *head;
+    ListNode* last = *head;
 
     while (last->next != NULL)
     {
@@ -74,11 +74,11 @@ void insertAtTheEnd(Node** head, int newValue) {
 
 }
 
-void insertAfter(Node* previous, int newValue) {
+void insertAfter(ListNode* previous, int newValue) {
 
     if (previous == NULL) return;
 
-    Node* newNode = new Node();
+    ListNode* newNode = new ListNode();
     newNode->val = newValue;
 
 
@@ -89,12 +89,12 @@ void insertAfter(Node* previous, int newValue) {
 
 void listCreator() {
 
-    Node* dummy = new Node();
-    Node* cur = dummy;
+    ListNode* dummy = new ListNode();
+    ListNode* cur = dummy;
 
     for (int i = 0; i < 10; i++)
     {
-        cur->next = new Node(i);
+        cur->next = new ListNode(i);
         cur = cur->next;
     }
 
@@ -108,9 +108,9 @@ void listCreator() {
 
 int main()
 {
-    Node* head = new Node();
-    Node* second = new Node();
-    Node* third = new Node();
+    ListNode* head = new ListNode();
+    ListNode* second = new ListNode();
+    ListNode* third = new ListNode();
 
     head->val = 1;
     second->val = 2;

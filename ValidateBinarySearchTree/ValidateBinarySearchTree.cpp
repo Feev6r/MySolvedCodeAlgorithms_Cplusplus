@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -54,6 +55,12 @@ bool validate(TreeNode* node, TreeNode* &prev) {
 
     return validate(node->right, prev);
 }
+
+
+
+
+
+
 
 
 int main()

@@ -4,12 +4,12 @@
 using namespace std;
 
 //Definition for singly-linked list.
-struct Node {
+struct ListNode {
 	int val;
-	Node* next;
-	Node() : val(0), next(nullptr) {}
-	Node(int x) : val(x), next(nullptr) {}
-	Node(int x, Node* next) : val(x), next(next) {}
+	ListNode* next;
+	ListNode() : val(0), next(nullptr) {}
+	ListNode(int x) : val(x), next(nullptr) {}
+	ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 //Example
@@ -23,11 +23,11 @@ struct s {
 };
 
 //My Solution (at least i was be able to learning even if the code is a little mess up)
-Node* removeNthFromEnd(Node* head, int n) {
+ListNode* removeNthFromEnd(ListNode* head, int n) {
 
 	int i = 0;
 
-	Node* temp = head;
+	ListNode* temp = head;
 
 	while (temp != NULL) {
 		i++;
@@ -54,9 +54,9 @@ Node* removeNthFromEnd(Node* head, int n) {
 
 
 //Clean Solution
-Node* removeNthFromEnd2(Node* head, int n) {
-	Node* res = new Node(0, head);
-	Node* dummy = res;
+ListNode* removeNthFromEnd2(ListNode* head, int n) {
+	ListNode* res = new ListNode(0, head);
+	ListNode* dummy = res;
 
 	for (int i = 0; i < n; i++) {
 		head = head->next;
@@ -76,6 +76,6 @@ Node* removeNthFromEnd2(Node* head, int n) {
 
 int main()
 {
-	Node(1, new Node(2, new Node(3, new Node(4))));
+	ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
 }
 

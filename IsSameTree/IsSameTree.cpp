@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <unordered_map>
-#include <queue>
 
 using namespace std;
 
@@ -14,13 +12,18 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-//    TreeNode* nodeEj = new TreeNode(1, new TreeNode(2), new TreeNode(3));
 
-int main() {
+bool isSameTree(TreeNode* p, TreeNode* q) {
 
-    bool b = false;
-    
-    if (!b) cout << "HOLA";
+    if ((!p && q) || (p && !q) ) return false;
+    if (!p && !q) return true;
+    if (p->val != q->val) return false;
+
+    return (isSameTree(p->left, q->left) && isSameTree(p->right, q->right));
 
 }
 
+int main()
+{
+    std::cout << "Hello World!\n";
+}

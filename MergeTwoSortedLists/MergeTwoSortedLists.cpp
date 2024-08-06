@@ -2,19 +2,19 @@
 
 using namespace std;
 
-struct Node {
+struct ListNode {
 	int val;
-	Node* next;
-	Node() : val(0), next(nullptr) {}
-	Node(int x) : val(x), next(nullptr) {}
-	Node(int x, Node* next) : val(x), next(next) {}
+	ListNode* next;
+	ListNode() : val(0), next(nullptr) {}
+	ListNode(int x) : val(x), next(nullptr) {}
+	ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 
-Node* mergeTwoLists(Node* list1, Node* list2) {
+ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 
-	Node* dummy = new Node(0);
-	Node* tail = dummy;
+	ListNode* dummy = new ListNode(0);
+	ListNode* tail = dummy;
 
 	while (list1 != nullptr && list2 != nullptr)
 	{
@@ -39,9 +39,9 @@ Node* mergeTwoLists(Node* list1, Node* list2) {
 
 }
 
-Node* mergeTwoLists(Node* list1, Node* list2) {
-	Node* dummy = new Node();
-	Node* cur = dummy;
+ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+	ListNode* dummy = new ListNode();
+	ListNode* cur = dummy;
 
 	while (list1 && list2) {
 

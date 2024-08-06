@@ -1,12 +1,12 @@
 #include <iostream>
 
-class Node {
+class ListNode {
 public:
 	int Value;
-	Node* Next;
+	ListNode* Next;
 };
 
-void printList(Node* n) {
+void printList(ListNode* n) {
 
 	while (n != NULL)
 	{
@@ -20,9 +20,9 @@ void printList(Node* n) {
 int main()
 {
 	//Nodes
-	Node* head = new Node();
-	Node* second = new Node();
-	Node* third = new Node();
+	ListNode* head = new ListNode();
+	ListNode* second = new ListNode();
+	ListNode* third = new ListNode();
 
 	//Values
 	head->Value = 1;

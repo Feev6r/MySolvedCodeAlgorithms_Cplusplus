@@ -10,23 +10,19 @@ struct ListNode {
 	ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
+ListNode* middleNode(ListNode* head) {
 
-bool hasCycle(ListNode* head) {
- 
 	ListNode* slow = head;
 	ListNode* fast = head;
 
-	while (slow && fast)
+	while (fast && fast->next)
 	{
-		slow = slow->next->next;
-		fast = fast->next;
+		slow = slow->next;
+		fast = fast->next->next;
 
-		if (fast == slow) {
-			return true;
-		}
 	}
 
-	return false;
+	return slow;
 }
 
 
@@ -34,3 +30,4 @@ int main()
 {
     std::cout << "Hello World!\n";
 }
+

@@ -2,22 +2,22 @@
 #include <algorithm>
 
 // Definition for singly-linked list.
-struct Node {
+struct ListNode {
 	int val;
-	Node* next;
-	Node() : val(0), next(nullptr) {}
-	Node(int x) : val(x), next(nullptr) {}
-	Node(int x, Node* next) : val(x), next(next) {}
+	ListNode* next;
+	ListNode() : val(0), next(nullptr) {}
+	ListNode(int x) : val(x), next(nullptr) {}
+	ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 
 
 class Solution {
 public:
-	Node* addTwoNumbers(Node* l1, Node* l2) {
+	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 	
-		Node* dummyHead = new Node(0);
-		Node* curr = dummyHead;
+		ListNode* dummyHead = new ListNode(0);
+		ListNode* curr = dummyHead;
 		int carry = 0;
 
 		while (l1 != NULL || l2 != NULL || carry != 0) {
@@ -28,14 +28,14 @@ public:
 			int sum = carry + x + y; //2+5
 			carry = sum / 10; //7 / 10
 
-			curr->next = new Node(sum % 10);
+			curr->next = new ListNode(sum % 10);
 			curr = curr->next;
 
 			l1 = l1 ? l1->next : nullptr;
 			l2 = l2 ? l2->next : nullptr;
 		}
 
-		Node* result = dummyHead->next;
+		ListNode* result = dummyHead->next;
 		delete dummyHead; // Freeing the memory allocated for dummyHead
 		return result;
 
@@ -44,7 +44,7 @@ public:
 	//Solution() :
 };
 
-void iterar(Node* n) {
+void iterar(ListNode* n) {
 	while (n != NULL)
 	{
 		std::cout << n->val << std::endl;
@@ -84,12 +84,12 @@ int main()
 
 	//reverse(arr, n);
 	//print(arr, n);
-	Node l1(5, new Node(4, new Node(3))); //list: [2,4,3]
-	Node l2(6, new Node(9, new Node(8))); //list: [5,6,4]
+	ListNode l1(5, new ListNode(4, new ListNode(3))); //list: [2,4,3]
+	ListNode l2(6, new ListNode(9, new ListNode(8))); //list: [5,6,4]
 
 
 	Solution solution;
-	Node* lw = solution.addTwoNumbers(&l1, &l2);
+	ListNode* lw = solution.addTwoNumbers(&l1, &l2);
 
 	//int a = 12 % 10;
 	//std::cout << a;

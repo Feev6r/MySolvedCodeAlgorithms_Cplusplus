@@ -2,20 +2,20 @@
 
 using namespace std;
 
-struct Node {
+struct ListNode {
 	int val;
-	Node* next;
-	Node() : val(0), next(nullptr) {}
-	Node(int x) : val(x), next(nullptr) {}
-	Node(int x, Node* next) : val(x), next(next) {}
+	ListNode* next;
+	ListNode() : val(0), next(nullptr) {}
+	ListNode(int x) : val(x), next(nullptr) {}
+	ListNode(int x, ListNode* next) : val(x), next(next) {}
 };
 
 
 
-bool isPalindrome(Node* head) {
+bool isPalindrome(ListNode* head) {
 
-	Node* mid = head;
-	Node* cur = head;
+	ListNode* mid = head;
+	ListNode* cur = head;
 
 	while (cur && cur->next)
 	{
@@ -23,11 +23,11 @@ bool isPalindrome(Node* head) {
 		mid = mid->next;
 	}
 
-	Node* prev = nullptr;
+	ListNode* prev = nullptr;
 	cur = mid;
 
 	while (cur != nullptr) {
-		Node* temp = cur->next;
+		ListNode* temp = cur->next;
 		cur->next = prev;
 
 		prev = cur;
@@ -52,12 +52,12 @@ bool isPalindrome(Node* head) {
 
 int main()
 {
-	Node* dummy = new Node();
-	Node* cur = dummy;
+	ListNode* dummy = new ListNode();
+	ListNode* cur = dummy;
 
 	for (int i = 0; i < 10; i++)
 	{
-		cur->next = new Node(i);
+		cur->next = new ListNode(i);
 		cur = cur->next;
 	}
 

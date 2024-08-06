@@ -1,7 +1,4 @@
 #include <iostream>
-#include <vector>
-#include <unordered_map>
-#include <queue>
 
 using namespace std;
 
@@ -14,13 +11,16 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-//    TreeNode* nodeEj = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+bool hasPathSum(TreeNode* root, int targetSum) {
 
-int main() {
+    if (!root) return false;
+    if (!root->left && !root->right && targetSum - root->val == 0) return true;
 
-    bool b = false;
-    
-    if (!b) cout << "HOLA";
+    return (hasPathSum(root->left, targetSum - root->val) || hasPathSum(root->right, targetSum - root->val));
+}
 
+int main()
+{
+    std::cout << "Hello World!\n";
 }
 
