@@ -24,7 +24,7 @@
     <ProjectGuid>{ecdaa4bc-912a-474a-bebb-42d99557b33b}</ProjectGuid>
     <RootNamespace>BreadthFirstSearchBFS</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>DepthFirstSearh</ProjectName>
+    <ProjectName>TraversalApproaches</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

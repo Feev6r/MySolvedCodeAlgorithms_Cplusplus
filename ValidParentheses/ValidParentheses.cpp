@@ -35,7 +35,6 @@ bool isValid(string s) {
 }
 
 //second solution:
-
 bool isValid2(string s) {
 
 	stack<char> st; // create an empty stack to store opening brackets
@@ -44,9 +43,9 @@ bool isValid2(string s) {
 	
 		if (c == '(' || c == '{' || c == '[') { // if the character is an opening bracket
 			st.push(c); // push it onto the stack
-		}
-		
+		}		
 		else { // if the character is a closing bracket
+
 			if (st.empty() || // if the stack is empty or 
 				(c == ')' && st.top() != '(') || // the closing bracket doesn't match the corresponding opening bracket at the top of the stack
 				(c == '}' && st.top() != '{') ||
@@ -61,8 +60,10 @@ bool isValid2(string s) {
 	// so the string is valid, otherwise, there are unmatched opening brackets, so return false
 }
 
+
+
 int main()
 {
-	isValid("()");
+	isValid2("([])");
 }
 

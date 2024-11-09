@@ -39,7 +39,9 @@ public:
         int n = nums.size();
 
         for (int i = 0; i < n; i++) {
+
             int complement = target - nums[i];
+            
             if (numMap.count(complement)) {
                 return { numMap[complement], i };
             }

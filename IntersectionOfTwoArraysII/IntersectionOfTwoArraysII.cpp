@@ -34,6 +34,9 @@ vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
 	return ans;
 }
 
+//[1,1,1,2,3,4,5,6]
+//[1,2,9]
+
 
 vector<int> intersect2(vector<int>& nums1, vector<int>& nums2) {
 

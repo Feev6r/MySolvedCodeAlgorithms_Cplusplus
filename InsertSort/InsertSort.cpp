@@ -5,7 +5,7 @@ using namespace std;
 
 void insertionSort(vector<int>& nums) {
 
-	for (int i = 0; i < nums.size(); i++)
+	for (int i = 1; i < nums.size(); i++)
 	{
 		int temp = nums[i];
 		int j = i - 1;

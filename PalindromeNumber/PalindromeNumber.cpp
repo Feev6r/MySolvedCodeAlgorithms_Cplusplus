@@ -5,9 +5,13 @@
 class Solution2 {
 public:
     bool isPalindrome(int x) {
+
         if (x < 0) return false;
+
         long s = 0, t = x;
+
         while (t) {
+
             s = (s * 10) + (t % 10);
             t = t / 10;
         }

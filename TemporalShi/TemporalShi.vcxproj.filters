@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TemporalShi.cpp">
+    <ClCompile Include="PLAYGROUND.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

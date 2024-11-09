@@ -16,11 +16,18 @@ struct TreeNode {
 
 //    TreeNode* nodeEj = new TreeNode(1, new TreeNode(2), new TreeNode(3));
 
+
+void mergeSort(vector<int>& arr, int left, int right) {
+
+    if (arr.size() <= 0) return;
+
+
+}
+
+
+
 int main() {
 
-    bool b = false;
-    
-    if (!b) cout << "HOLA";
 
 }
 
