@@ -24,6 +24,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TwoPointer-TwoSum", "TwoPointer-TwoSum\TwoPointer-TwoSum.vcxproj", "{05BD0AA5-B9CE-455E-894C-80610AF035C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{274D6268-0475-47E6-BC88-33B86788A372}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms", "Algorithms", "{948F835C-4045-4619-8244-C3DA5D16E3D5}"
 EndProject
@@ -110,6 +113,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LongestPalindromicSubstring", "LongestPalindromicSubstring\LongestPalindromicSubstring.vcxproj", "{E310652F-0F2D-461F-9607-601D1A46F344}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinkedListProblems", "LinkedListProblems", "{C68C948D-3757-4EC3-B8F8-B4346BF3BFD0}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeleteNodeInALinkedList", "DeleteNodeInALinkedList\DeleteNodeInALinkedList.vcxproj", "{5884C177-B84F-4684-B069-9CC6E11D2F1D}"
 EndProject
@@ -128,8 +134,14 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaximumDepthOfBinaryTree", "MaximumDepthOfBinaryTree\MaximumDepthOfBinaryTree.vcxproj", "{CA6BDBF9-2B2B-4E5C-8F88-2EBFDD3BD3D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Trees", "Trees", "{30AE170D-FFB9-4E2D-8031-A700DE556432}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General", "General", "{208B8B4D-2C31-44BB-8D30-65384A6DC780}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ValidateBinarySearchTree", "ValidateBinarySearchTree\ValidateBinarySearchTree.vcxproj", "{5D6922A0-DCE0-477A-8175-377BFA6DD2EA}"
 EndProject
@@ -144,6 +156,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstBadVersion", "First adVersion\First adVersion.vcxproj", "{4A872950-2AC1-41EE-BD30-99CCCBD43550}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DynamicProgramming", "DynamicProgramming", "{02F528BB-F3B1-4F98-A86E-4781951BB291}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClimbingStairs", "ClimbingStairs\ClimbingStairs.vcxproj", "{DC4832A7-FAEE-4629-96D7-D7DC4B20843B}"
 EndProject
@@ -208,6 +223,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Top_K_FrequentElements", "Top_K_FrequentElements\Top_K_FrequentElements.vcxproj", "{3C4E4B4A-846F-4C5B-9470-97E8A93CC43E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreBasics", "CoreBasics", "{7B5EA69A-80A3-4291-980C-D2B45FD8C727}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DinamicArray", "DinamicArray\DinamicArray.vcxproj", "{9B43B7AE-2549-441A-A01F-13ABB0EE569D}"
 EndProject
@@ -302,6 +320,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CountNumberOfNiceSubarrays", "CountNumberOfNiceSubarrays\CountNumberOfNiceSubarrays.vcxproj", "{EEE6340F-A855-4BB2-A9B5-806381016162}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SlidingWindow", "SlidingWindow", "{EE940079-4B84-44B2-AE39-39413333A695}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySubarraysWithSum", "BinarySubarraysWithSum\BinarySubarraysWithSum.vcxproj", "{264A9419-ABF2-40C2-9EC0-5F0B9C24013C}"
 EndProject
@@ -326,6 +347,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindKClosestElements", "FindKClosestElements\FindKClosestElements.vcxproj", "{F725EFDC-3B14-48DA-AD1F-113DA39ADD25}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BinarySearch", "BinarySearch", "{10C922EE-104C-4235-91F6-05A56A7805F9}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SearchInsertPosition", "SearchInsert Position\SearchInsert Position.vcxproj", "{7EDD309A-70C7-44E7-86A3-3ED17407894F}"
 EndProject
@@ -436,6 +460,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImplementTrie(PrefixTree)", "ImplementTrie(PrefixTree)\ImplementTrie(PrefixTree).vcxproj", "{26967716-FBBF-48BC-8431-F5CCE4AE0D79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backtracking", "Backtracking", "{6413329A-302F-487C-842C-A2A81758CF43}"
+	ProjectSection(SolutionItems) = preProject
+		.gitKeep = .gitKeep
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WordSearch", "WordSearch\WordSearch.vcxproj", "{75962955-CD3B-4E54-82B8-5DE077039CCB}"
 EndProject
