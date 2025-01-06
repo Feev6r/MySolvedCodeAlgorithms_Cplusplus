@@ -27,6 +27,11 @@ int partition(vector<int>& arr, int low, int high)
 	return (i + 1);
 }
 
+//[1,5,3,2,1,3,4,8]
+// 
+// 
+//[8,1,5,2,1,3,4,3]
+
 /* The main function that implements QuickSort
  arr[] --> Array to be sorted,
   low  --> Starting index,

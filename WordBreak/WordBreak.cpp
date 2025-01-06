@@ -15,6 +15,7 @@ bool solve(string s, vector<string>& wordDict, unordered_map<string, bool>& memo
 	for (string& w : wordDict) {
 
 		if (s.substr(0, w.size()) == w) {
+
             if (solve(s.substr(w.size()), wordDict, memo)) {
                 memo[s] = true;
                 return memo[s];

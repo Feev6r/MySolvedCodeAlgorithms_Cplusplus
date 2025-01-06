@@ -19,7 +19,6 @@ ListNode* reverseList(ListNode* head) {
         ListNode* temp = curr->next;
         curr->next = prev;
 
-
         prev = curr;
         curr = temp;
     }
@@ -27,6 +26,7 @@ ListNode* reverseList(ListNode* head) {
     return prev;
 
 }
+
 
 //[1,2,3,4,5,6,7]
 // 

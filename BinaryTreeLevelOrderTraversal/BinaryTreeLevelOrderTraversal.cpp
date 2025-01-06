@@ -52,6 +52,7 @@ void breadthFirstTraversal(TreeNode* root) {
 
     while (!queue.empty()) {
         const TreeNode* curr = queue.front();
+        
         queue.pop();
         cout << curr->val;
 

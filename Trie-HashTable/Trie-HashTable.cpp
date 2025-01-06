@@ -8,16 +8,17 @@ using namespace std;
 
 class Trie {
 public:
-    bool is_end;  // Indicates if the current node marks the end of a word
+    bool isEnd;  // Indicates if the current node marks the end of a word
     unordered_map<char, Trie*> children;  // Hash table to store child nodes
 
-    Trie() : is_end(false) {}
+    Trie() : isEnd(false) {}
 
+    Trie* root;
 
     // Insert a word into the trie
     void insert(const string& word) {
 
-        Trie* node = this;
+        Trie* node = root;
 
         for (char ch : word) {
 
@@ -27,34 +28,33 @@ public:
             }
             node = node->children[ch];
         }
-        node->is_end = true;
+        node->isEnd = true;
     }
-
 
 
     // Search for a word in the trie
     bool search(const string& word) {
-
+    
         Trie* node = this;
-
+    
         for (char ch : word) {
-
+    
             if (node->children.find(ch) == node->children.end()) {
                 return false;
             }
             node = node->children[ch];
         }
-        return node->is_end;
+        return node->isEnd;
     }
 
     // Delete a word from the trie
     bool delete_word(const string& word, int depth = 0) {
         // If we reached the end of the word
         if (depth == word.size()) {
-            if (!is_end) {
+            if (!isEnd) {
                 return false;  // Word not found
             }
-            is_end = false;  // Unmark the end of the word
+            isEnd = false;  // Unmark the end of the word
             return children.empty();  // Return true if no children, allowing pruning
         }
 
@@ -71,7 +71,7 @@ public:
             children.erase(ch);   // Remove the child node
 
             // Return true if no children and not the end of another word
-            return children.empty() && !is_end;
+            return children.empty() && !isEnd;
         }
 
         return false;
@@ -79,7 +79,7 @@ public:
 
     // Get all words in the trie
     void get_all_words(string prefix, vector<string>& words) {
-        if (is_end) {
+        if (isEnd) {
             words.push_back(prefix);  // If at the end of a word, add it to the list
         }
 
@@ -100,24 +100,25 @@ int main() {
     trie.insert("cart");
 
     // Search for words
-    std::cout << "Search results:\n";
-    std::cout << "cat: " << (trie.search("cat") ? "Found" : "Not found") << '\n';
-    std::cout << "dog: " << (trie.search("dog") ? "Found" : "Not found") << '\n';
-    std::cout << "cow: " << (trie.search("cow") ? "Found" : "Not found") << '\n';
+    //std::cout << "Search results:\n";
+    //std::cout << "cat: " << (trie.search("cat") ? "Found" : "Not found") << '\n';
+    //std::cout << "dog: " << (trie.search("dog") ? "Found" : "Not found") << '\n';
+    //std::cout << "cow: " << (trie.search("cow") ? "Found" : "Not found") << '\n';
 
     // Delete a word
     trie.delete_word("car");
-    std::cout << "\nAfter deleting 'car':\n";
-    std::cout << "car: " << (trie.search("car") ? "Found" : "Not found") << '\n';
-    std::cout << "cart: " << (trie.search("cart") ? "Found" : "Not found") << '\n';
+    //std::cout << "\nAfter deleting 'car':\n";
+    //std::cout << "car: " << (trie.search("car") ? "Found" : "Not found") << '\n';
+    //std::cout << "cart: " << (trie.search("cart") ? "Found" : "Not found") << '\n';
 
     // Get all words
-    std::vector<std::string> words;
-    trie.get_all_words("", words);
-    std::cout << "\nAll words in the trie:\n";
-    for (const std::string& word : words) {
-        std::cout << word << '\n';
-    }
+    //std::vector<std::string> words;
+    //trie.get_all_words("", words);
+    //std::cout << "\nAll words in the trie:\n";
+    //for (const std::string& word : words) {
+    //    std::cout << word << '\n';
+    //}
 
     return 0;
 }
+

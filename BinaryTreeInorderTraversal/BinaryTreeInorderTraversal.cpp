@@ -16,22 +16,17 @@ struct TreeNode {
 //RECURSIVE INORDER TRAVERSAL
 //--------------------------------------------------------
 
-vector<int> inorderTraversal(TreeNode* root) {
-    
-    vector<int> nodes;
-    inorder(root, nodes);
-    return nodes;
+
+
+bool isSameTree(TreeNode* p, TreeNode* q) {
+
+
+    if (!p && !q) return true;
+    if (!p && q || p && q) return false;
+    if (p->val != q->val) return false;
+
+    return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
 }
-
-void inorder(TreeNode* root, vector<int>& nodes) {
-    
-    if (!root) return;
-
-    inorder(root->left, nodes);
-    nodes.push_back(root->val);
-    inorder(root->right, nodes);
-}
-
 
 
 //ITERATIVE VERSION MORRIS TRAVERSAL

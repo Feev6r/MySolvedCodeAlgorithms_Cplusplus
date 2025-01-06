@@ -56,18 +56,25 @@ void DFS(vector<vector<int>>& adj, int s) {
 }
 
 
+bool inorder(TreeNode* root, int lastValue) {
+
+	if (!root) return true;
+
+	inorder(root->left, root->val);
+
+	if (root->val > lastValue) return false;
+
+	inorder(root->right, root->val);
+
+}
+
+
+
+
 void main() {
 
-	int V = 5;
-	vector<vector<int>> adj(V);
 
-	// Add edges
-	vector<vector<int>> edges = { {1, 2},{1, 0},{2, 0},{2, 3},{2, 4} };
-	for (auto& e : edges)
-		addEdge(adj, e[0], e[1]);
+	cout << 4 % 3;
 
-	int s = 1; // Starting vertex for DFS
-	cout << "DFS from source: " << s << endl;
-	DFS(adj, s); // Perform DFS starting from the source vertex
 }
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
@@ -11,18 +12,50 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-int f(TreeNode* curr) {
+//solution
+int preorder(TreeNode* curr) {
 
     if (curr == nullptr) return INT_MAX;
-    if (curr->left == nullptr and curr->right == nullptr) return 1;
-    return min(f(curr->left), f(curr->right)) + 1;
+    if (!curr->left && !curr->right) return 1;
+    
+    return min(preorder(curr->left),
+               preorder(curr->right)) + 1;
 
 }
+
 int minDepth(TreeNode* curr) {
-    int ans = f(curr);
-    return ans == INT_MAX ? 0 : ans;
+    return preorder(curr) == INT_MAX ? 0 : preorder(curr);
 }
 
+
+//queue solution
+int minDepth(TreeNode* root) {
+    if (!root) return 0;
+
+    queue<TreeNode*> q;
+    q.push(root);
+
+    int depth = 1;
+    
+    while (!q.empty()) {
+        
+        int n = q.size();
+        while (n--) {
+
+            TreeNode* node = q.front();
+            q.pop();
+
+            if (!node->left && !node->right) return depth;
+            if (node->left) q.push(node->left);
+            if (node->right) q.push(node->right);
+        }
+
+        depth++;
+    
+    }
+
+    return depth;
+}
 
 
 int main()

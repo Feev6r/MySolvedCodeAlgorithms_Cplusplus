@@ -22,7 +22,7 @@ struct s {
 	s(int x, int y) : v1(x), v2(y) {}
 };
 
-//My Solution (at least i was be able to learning even if the code is a little mess up)
+//My Solution (at least i was be able to learn even if the code is a little messy)
 ListNode* removeNthFromEnd(ListNode* head, int n) {
 
 	int i = 0;
@@ -66,13 +66,24 @@ ListNode* removeNthFromEnd2(ListNode* head, int n) {
 		head = head->next;
 		dummy = dummy->next;
 	}
-	//200IQ this solution lol!!!
 
 	dummy->next = dummy->next->next;
 
 	return res->next;
 }
 
+ListNode* removeNthFromEnd(ListNode* head, int n) {
+	ListNode* fast = head, *slow = head;
+
+	for (int i = 0; i < n; i++) fast = fast->next;
+
+	if (!fast) return head->next;
+
+	while (fast->next) fast = fast->next, slow = slow->next;
+
+	slow->next = slow->next->next;
+	return head;
+}
 
 int main()
 {

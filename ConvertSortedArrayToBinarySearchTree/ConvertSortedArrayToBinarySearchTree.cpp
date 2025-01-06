@@ -41,10 +41,11 @@ TreeNode* sortedArrayToBST2(vector<int>& nums) {
     return nullptr;
 }
 
+//SECOND SOLUTION - BEST I GUESS
+
 TreeNode* sortedArrayToBST(vector<int>& num) {
 
-    if (num.size() == 0) return NULL;
-
+    if (num.size() == 0) return nullptr;
     if (num.size() == 1) return new TreeNode(num[0]);
 
 

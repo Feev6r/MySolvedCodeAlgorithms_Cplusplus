@@ -4,28 +4,44 @@
 
 using namespace std;
 
-string longestCommonPrefix(vector<string>& strs) {
-
+string longestCommonPrefix3(vector<string>& strs) {
     if (strs.empty()) return "";
 
-    string pref = strs[0];
-    int prefLen = pref.length();
+    for (int i = 0; i < strs[0].size(); i++) {
+
+        char c = strs[0][i];
+
+        for (int j = 1; j < strs.size(); j++) {
+
+            if (i == strs[j].size() || strs[j][i] != c) {
+
+                return strs[0].substr(0, i);
+            }
+
+        }
+    }
+    return strs[0];
+}
+
+string longestCommonPrefix2(vector<string>& strs) {
+    if (strs.size() == 0) return "";
+
+    string prefix = strs[0];
 
     for (int i = 1; i < strs.size(); i++) {
 
-        string s = strs[i];
-        while (prefLen > s.length() || pref != s.substr(0, prefLen)) {
+        int a = strs[i].find(prefix);
 
-            prefLen--;
+        while (strs[i].find(prefix) != 0) {
 
-            if (prefLen == 0) {
-                return "";
-            }
-            pref = pref.substr(0, prefLen);
+            prefix = prefix.substr(0, prefix.length() - 1);
+
+            if (prefix.empty()) return "";
         }
     }
 
-    return pref;
+
+    return prefix;
 }
 
 //O(strs[0].lenght * strs.length)
@@ -35,5 +51,6 @@ string longestCommonPrefix(vector<string>& strs) {
 int main()
 {
     vector<string> v = { "dog","racecar","car" };
-    cout << longestCommonPrefix(v);
+    vector<string> v2 = { "flower","flow","flight" };
+    cout << longestCommonPrefix2(v2);
 }

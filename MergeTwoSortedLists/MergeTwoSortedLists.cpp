@@ -20,9 +20,6 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 	{
 		if (list1 < list2) {
 			tail->next = list1;
-
-
-
 		}
 		else {
 
@@ -46,6 +43,7 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 	while (list1 && list2) {
 
 		if (list1->val > list2->val) {
+
 			cur->next = list2;
 			list2 = list2->next;
 		}
@@ -62,6 +60,47 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 	return dummy->next;
 }
 
+bool hasCycle(ListNode* head) {
+
+
+	ListNode* fast = head;
+	ListNode* slow = head;
+
+	while (slow->next)
+	{
+
+		slow = slow->next;
+		fast = fast->next->next;
+
+		if (slow = fast) {
+			return true;
+		}
+	}
+
+}
+
+
+//ListNode* oddEvenList(ListNode* head) {
+//
+//	ListNode* even = head->next;
+//	ListNode* even = head->next;
+//
+//	ListNode* dummy1 = new ListNode();
+//	ListNode* dummy2 = new ListNode();
+//	ListNode* odd = dummy2;
+//	odd->next = head;
+//
+//	while (even->next && odd->next)
+//	{
+//		even.next = even->next->next;
+//		odd = odd->next->next;
+//	}
+//
+//	even->next = dummy->next;
+//
+//	return even;
+//
+//}
 
 int main()
 {

@@ -26,5 +26,6 @@ int findMin(vector<int>& nums) {
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    vector<int> v = { 4,5,6,7,0,1,2 };
+    findMin(v);
 }
